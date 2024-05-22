@@ -1,19 +1,22 @@
-import { Nav, Image, NavLink } from "@/styles/styledComponent/styled";
+import { Nav, Image, NavLink, NavLinksContainer } from "@/styles/styledComponent/styled";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import styled from "styled-components";
 
 const Navbar: React.FC = () => {
     return (
         <Nav>
             <Image src="/POKEDEX.png" alt="Pokedex" />
-            <Link href="/" passHref>
-                <NavLink>Home</NavLink>
-            </Link>
-            <Link href="/PokemonsPage" passHref>
-                <NavLink>Pokémons</NavLink>
-            </Link>
+            <NavLinksContainer>
+                <NavLink href="/" passHref>
+                    Home
+                </NavLink>
+                <NavLink href="/PokemonPage" passHref>
+                    Pokémons
+                </NavLink>
+            </NavLinksContainer>
         </Nav>
     )
 }
 
-export default dynamic(() => Promise.resolve(Navbar), { ssr: false });
+export default Navbar;
