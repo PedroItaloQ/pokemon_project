@@ -1,13 +1,13 @@
-import axios, { AxiosResponse } from 'axios';
-import { PokemonCredentials } from '@/interfaces/PokemonCredentials';
+import axios from 'axios';
 
-const getData = async (pokemonData: PokemonCredentials): Promise<AxiosResponse<any>> => {
-  try {
-    const response: AxiosResponse<any> = await axios.get('https://pokeapi.co/api/v2/pokemon');
-    return response;
-  } catch (error) {
-    throw error;
-  }
-};
+const getData = async (): Promise<any> => {
+    const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const pokemonResults = response.data.results;
+
+    const pokemonDetailsPromises = pokemonResults.map((pokemon: any) => axios.get(pokemon.url));
+    const pokemonDetailsResponses = await Promise.all(pokemonDetailsPromises);
+
+    return pokemonDetailsResponses.map(res => res.data);
+}
 
 export default getData;
