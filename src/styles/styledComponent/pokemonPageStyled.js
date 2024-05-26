@@ -12,16 +12,29 @@ export const Nav = styled.nav`
 `;
 
 export const Container = styled.div`
-  background-color: white; /* Adiciona a cor de fundo branca */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-  display: flex; /* Adiciona display flex */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  
-  width: 90vw; /* Define a largura */
-  height: 90vh; /* Define a altura */
-  border-radius: 15px; /* Adiciona bordas arredondadas */
-  margin: auto; /* Centraliza o Container horizontal e verticalmente */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 1200px;
+  height: auto;
+  min-height: 80vh;
+  border-radius: 15px;
+  margin: 120px auto 0 auto;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    width: 95vw;
+    margin-top: 100px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100vw;
+    margin-top: 80px;
+  }
 `;
 
 export const Span = styled.div`
@@ -39,10 +52,10 @@ export const NavLink = styled(Link)`
   margin: 0 3rem;
   font-weight: bold;
   margin-top: 3vh;
-  font-family: 'Poetsen One', sans-serif; // Adiciona a fonte
+  font-family: 'Poetsen One', sans-serif;
 
   &:hover {
-    color: rgb(175, 0, 0);
+    color: #4c4848;
   }
 `;
 

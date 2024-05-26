@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image, Text } from '@chakra-ui/react'
+import { Box, Image, Text } from '@chakra-ui/react';
 import { PokemonCredentials } from "@/interfaces/PokemonCredentials";
 
 interface CardProps {
@@ -14,14 +14,25 @@ const Card: React.FC<CardProps> = ({ pokemon }) => {
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.2)"
       overflow="hidden"
       textAlign="center"
-      margin="10px"
-      width="150px"
-      padding="10px"
-      marginLeft="4.5vh"
-      position="relative" // Permite que o número fique posicionado absolutamente
+      m="10px"
+      w={{ base: '120px', sm: '150px', md: '150px' }}
+      p="10px"
+      ml={{ base: '2vh', sm: '4vh', md: '4.5vh' }}
+      position="relative"
+      cursor="pointer"
     >
-      <Image src={pokemon.sprites.front_default || ''} alt={pokemon.name} width="100%" height="auto" />
-      <Text fontSize="1.2em" color="#333">{pokemon.name}</Text>
+      <Image
+        src={pokemon.sprites.front_default || ''}
+        alt={pokemon.name}
+        width={{ base: '80%', sm: '90%', md: '100%' }}
+        height="auto"
+      />
+
+      <Text
+        fontSize={{ base: '1em', sm: '1.2em', md: '1.3em' }}
+      >
+        {pokemon.name}
+      </Text>
       <Box
         position="absolute"
         top="5px"

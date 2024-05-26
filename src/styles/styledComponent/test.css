@@ -4,5 +4,7 @@ body{
     align-items: flex-end;
     margin-top: 10px;
     left: 0;
-    color: rgb(251, 61, 61);
+    color: #4c4848;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
