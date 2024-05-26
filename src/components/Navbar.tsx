@@ -1,4 +1,4 @@
-import { Nav, Image, NavLink, NavLinksContainer } from "@/styles/styledComponent/styled";
+import { Nav, Image, NavLink, NavLinksContainer } from "@/styles/styledComponent/pokemonPageStyled";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import styled from "styled-components";
