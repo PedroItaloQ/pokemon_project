@@ -46,7 +46,6 @@ const PokemonPage: React.FC = () => {
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
 
-    // Filtra os Pokémon com base no termo de pesquisa
     const filteredPokemons = pokemons.filter(pokemon => 
         pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
     );

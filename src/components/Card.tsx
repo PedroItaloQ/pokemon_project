@@ -28,6 +28,10 @@ const Card: React.FC<CardProps> = ({ pokemon }) => {
         height="auto"
       />
 
+      <Text fontSize={{ base: '1em', sm: '1.2em', md: '1.3em' }}>
+        {pokemon.type}
+      </Text>
+
       <Text
         fontSize={{ base: '1em', sm: '1.2em', md: '1.3em' }}
       >
