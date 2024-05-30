@@ -81,9 +81,16 @@ const PokemonPage: React.FC = () => {
                         </Box>
                         <Box display="flex" flexWrap="wrap">
                             {currentCards.map((pokemon, index) => (
-                                <Box key={index} width="16.666%" padding="10px">
-                                    <Card pokemon={pokemon} />
-                                </Box>
+                                 <Box 
+                                 key={index} 
+                                 width={{
+                                     base: "33.3333%", // 3 por linha em telas pequenas
+                                     md: "16.666%",    // 6 por linha em telas médias e maiores
+                                 }} 
+                                 padding="10px"
+                             >
+                                 <Card pokemon={pokemon} />
+                             </Box>
                             ))}
                         </Box>
                         <Box textAlign="center" marginTop="20px" display="flex" justifyContent="center">
