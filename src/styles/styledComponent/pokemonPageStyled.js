@@ -38,7 +38,14 @@ export const Container = styled.div`
 `;
 
 export const Span = styled.div`
+margin-right: 10vh;
 
+  @media (max-width: 761px) {
+  margin-right: 10vh;
+
+  @media (max-width: 450px) {
+    margin-left: 2.0vh;
+  }
 `;
 
 export const Image = styled.img`
@@ -56,6 +63,10 @@ export const NavLink = styled(Link)`
 
   &:hover {
     color: #4c4848;
+  }
+
+  @media (max-width: 450px) {
+    display: none;
   }
 `;
 
