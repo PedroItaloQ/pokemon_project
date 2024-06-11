@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { Container } from "@chakra-ui/react";
+import { Parag } from "../styles/styledComponent/homeStyled"
 
 export default function Home() {
   return (
@@ -10,7 +12,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        
+        <Container>
+          <Parag>
+            Bem-vindo(a) ao meu projeto pessoal de exploração das minhas habilidades de desenvolvimento!
+            Aqui, mergulhei no fascinante universo dos Pokémon, conectando este front-end à API dos Pokémon para criar
+            uma experiência interativa e divertida.
+          </Parag>
+          
+          <Parag>
+            Bem-vindo(a) ao meu projeto pessoal de exploração das minhas habilidades de desenvolvimento!
+            Aqui, mergulhei no fascinante universo dos Pokémon, conectando este front-end à API dos Pokémon para criar
+            uma experiência interativa e divertida.
+          </Parag>
+        </Container>
+        <p>
+        </p>
       </main>
     </>
   );
