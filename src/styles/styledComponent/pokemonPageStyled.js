@@ -12,16 +12,16 @@ export const Nav = styled.nav`
 `;
 
 export const Container = styled.div`
-  background-color: white; /* Adiciona a cor de fundo branca */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-  display: flex; /* Adiciona display flex */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  width: 90vw; /* Define a largura */
-  height: 90vh; /* Define a altura */
-  border-radius: 15px; /* Adiciona bordas arredondadas */
-  margin: auto; /* Centraliza o Container horizontal e verticalmente */
+  width: 90vw;
+  height: 90vh;
+  border-radius: 15px;
+  margin: auto;
 `;
 
 export const Span = styled.div`
@@ -39,7 +39,7 @@ export const NavLink = styled(Link)`
   margin: 0 3rem;
   font-weight: bold;
   margin-top: 3vh;
-  font-family: 'Poetsen One', sans-serif; // Adiciona a fonte
+  font-family: 'Poetsen One', sans-serif;
 
   &:hover {
     color: rgb(175, 0, 0);

@@ -6,10 +6,10 @@ import Card from "@/components/Card";
 import { Box, Text, HStack, IconButton } from '@chakra-ui/react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
-const PokemonPage: React.FC = () => {
+const PokemonPage = ({ pokemonData }: { pokemonData: { name: string, url: string }[] }) => {
     const [pokemons, setPokemons] = useState<PokemonCredentials[]>([]);
     const [error, setError] = useState<string | null>(null);
-    const [cardsPerPage, setCardsPerPage] = useState<number>(12); // Define o número de cartões por página
+    const [cardsPerPage, setCardsPerPage] = useState<number>(12);
     const [currentPage, setCurrentPage] = useState<number>(1);
 
     useEffect(() => {
