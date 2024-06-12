@@ -15,17 +15,37 @@ export const Container = styled.div`
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  
   width: 90vw;
-  height: 90vh;
+  max-width: 1200px;
+  height: auto;
+  min-height: 80vh;
   border-radius: 15px;
-  margin: auto;
+  margin: 120px auto 0 auto;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    width: 95vw;
+    margin-top: 100px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100vw;
+    margin-top: 80px;
+  }
 `;
 
 export const Span = styled.div`
+margin-right: 10vh;
 
+  @media (max-width: 761px) {
+  margin-right: 10vh;
+
+  @media (max-width: 450px) {
+    margin-left: 2.0vh;
+  }
 `;
 
 export const Image = styled.img`
@@ -40,9 +60,14 @@ export const NavLink = styled(Link)`
   font-weight: bold;
   margin-top: 3vh;
   font-family: 'Poetsen One', sans-serif;
+  font-family: 'Poetsen One', sans-serif;
 
   &:hover {
-    color: rgb(175, 0, 0);
+    color: #4c4848;
+  }
+
+  @media (max-width: 450px) {
+    display: none;
   }
 `;
 

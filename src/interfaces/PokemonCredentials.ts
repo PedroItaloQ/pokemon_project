@@ -1,5 +1,6 @@
 export interface PokemonCredentials {
     name: string;
+    type: string
     sprites: Sprites;
     id: number;
 }
