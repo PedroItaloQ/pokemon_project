@@ -1,9 +1,9 @@
-import { Container, Span, Button } from "@/styles/styledComponent/pokemonPageStyled";
+import { Span, Button } from "@/styles/styledComponent/pokemonPageStyled";
 import { useEffect, useState } from "react";
 import getData from "@/utils/GetData";
 import { PokemonCredentials } from "@/interfaces/PokemonCredentials";
 import Card from "@/components/Card";
-import { Box, Text, HStack, IconButton, Input } from '@chakra-ui/react';
+import { Box, Text, HStack, IconButton, Input, Flex, Container } from '@chakra-ui/react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 const PokemonPage = ({ pokemonData }: { pokemonData: { name: string, url: string }[] }) => {
@@ -46,7 +46,7 @@ const PokemonPage = ({ pokemonData }: { pokemonData: { name: string, url: string
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
 
-    const filteredPokemons = pokemons.filter(pokemon => 
+    const filteredPokemons = pokemons.filter(pokemon =>
         pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -65,12 +65,7 @@ const PokemonPage = ({ pokemonData }: { pokemonData: { name: string, url: string
     };
 
     return (
-        <Container>
-            <Span>
-                {error ? (
-                    <p>{error}</p>
-                ) : (
-                    <>
+        <Flex direction='column' bg="white" p="10" borderRadius="18" h="100%">
                         <Box textAlign="center" marginBottom="20px">
                             <Input
                                 placeholder="Search Pokémon"
@@ -79,18 +74,18 @@ const PokemonPage = ({ pokemonData }: { pokemonData: { name: string, url: string
                                 width="300px"
                             />
                         </Box>
-                        <Box display="flex" flexWrap="wrap">
+                        <Box display="flex" flexWrap="wrap" width="100%" alignItems="center" justifyContent="center">
                             {currentCards.map((pokemon, index) => (
-                                 <Box 
-                                 key={index} 
-                                 width={{
-                                     base: "33.3333%", // 3 por linha em telas pequenas
-                                     md: "16.666%",    // 6 por linha em telas médias e maiores
-                                 }} 
-                                 padding="10px"
-                             >
+                            //      <Box 
+                            //      key={index} 
+                            //      width={{
+                            //          base: "33.3333%", // 3 por linha em telas pequenas
+                            //          md: "16.666%",    // 6 por linha em telas médias e maiores
+                            //      }}
+                            //      padding="10px"
+                            //  >
                                  <Card pokemon={pokemon} />
-                             </Box>
+                            //  </Box>
                             ))}
                         </Box>
                         <Box textAlign="center" marginTop="20px" display="flex" justifyContent="center">
@@ -110,10 +105,7 @@ const PokemonPage = ({ pokemonData }: { pokemonData: { name: string, url: string
                                 />
                             </HStack>
                         </Box>
-                    </>
-                )}
-            </Span>
-        </Container>
+        </Flex>
     );
 }
 
