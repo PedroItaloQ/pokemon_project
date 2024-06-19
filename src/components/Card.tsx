@@ -15,16 +15,16 @@ const Card: React.FC<CardProps> = ({ pokemon }) => {
       overflow="hidden"
       textAlign="center"
       m="10px"
-      w={{ base: '120px', sm: '100px', md: '150px' }}
+      w={{ base: '120px', sm: '150px', md: '150px' }}
       p="10px"
-      ml={{ base: '2vh', sm: '2.5vh', md: '4.6vh' }}
+      // ml={{ base: '2vh', sm: '2.5vh', md: '4.6vh' }}
       position="relative"
       cursor="pointer"
     >
       <Image
         src={pokemon.sprites.front_default || ''}
         alt={pokemon.name}
-        width={{ base: '80%', sm: '80%', md: '100%' }}
+        width={{ base: '80%', sm: '90%', md: '100%' }}
         height="auto"
       />
 
