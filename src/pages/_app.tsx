@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const ContentWrapper = styled.div`
-  margin-top: 60px;
+  margin: 100px 130px;
 `;
 
 export default function App({ Component, pageProps }: AppProps) {
